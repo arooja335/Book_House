@@ -1,0 +1,122 @@
+@* @{
+    ViewData["Title"] = "Home Page";
+}
+<!Doctype html>
+<html>
+
+    
+<body>
+    <br />
+    
+    <div class="input-group">
+        <input name="childname" class="form-control my-0 py-1 black-border";type="text" placeholder="Search by book title/author/category" arial-label="Search">
+     
+
+    </div>
+    <br /><br />
+
+    <section>
+        <div class="container"> 
+            <br />
+            <h2 class="display-3">Get Your Favorite Books Here</h2>
+            <button type="submit" class="w-20 btn btn-lg btn-primary" style="background-color: black; color: white;border:black">Shop Now</button>
+        </div>
+        
+       
+    </section><br />
+    <section>
+        <div class=" display-4">
+            <h3>New Arrivals</h3>
+        </div>
+        <br />
+        <table>
+            <tr>
+                <td><img src="~/images/book1.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book2.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book3.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book4.jpeg" width="263" height="434" /></td>
+            </tr>
+            <tr>
+                
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+
+                
+            </tr>
+            
+        </table>
+       
+    </section>
+
+  
+</body>
+
+
+
+</html>
+*@
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <br />
+
+    <form asp-controller="Book" asp-action="Search" method="get">
+        <div class="input-group">
+            <input name="searchString" class="form-control my-0 py-1 black-border" type="text"
+                   placeholder="Search by book title/author/category" aria-label="Search">
+        </div>
+        <!-- No need for a submit button, the form will submit on Enter -->
+    </form>
+    <br/>
+    <section>
+        <div class="container">
+            <!-- Rest of your content -->
+            <h2 class="display-3">Get Your Favorite Books Here</h2>
+            <button type="submit" class="w-20 btn btn-lg btn-primary" style="background-color: black; color: white;border:black">Shop Now</button>
+        </div>
+    </section>
+
+    <section>
+        
+        </br>
+
+        <div class=" display-4">
+            <h3>New Arrivals</h3>
+        </div>
+        <br />
+        
+        <table>
+            <tr>
+                <td><img src="~/images/book1.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book2.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book3.jpeg" width="263" height="434" /></td>
+                <td><img src="~/images/book4.jpeg" width="263" height="434" /></td>
+            </tr>
+            <tr>
+
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+                <td><button type="submit" class="button-container">Buy Now</button></td>
+
+
+            </tr>
+
+        </table>
+
+
+
+    </section>
+
+</body>
+
+</html>

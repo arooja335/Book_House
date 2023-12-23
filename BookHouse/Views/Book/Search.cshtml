@@ -1,0 +1,38 @@
+﻿@model List<Book>
+
+<h2>Search Results</h2>
+
+
+@if (ViewBag.NoBooksFound != null)
+{
+    <p>@ViewBag.NoBooksFound</p>
+}
+else{
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <!-- Add other book properties as needed -->
+        </tr>
+    </thead>
+    <tbody>
+
+
+       
+
+       
+
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <!-- Add other book properties as needed -->
+            </tr>
+        
+
+        }
+    </tbody>
+</table>
+}
